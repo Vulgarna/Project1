@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to Chocolate Page!</title>
+
+<style>
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0 10%;
+	color: #57413b;
+	background-color: #fffcf5;
+	font: 1.25rem/1.5 'Roboto', sans-serif;
+}
+
+.wrapper {
+	max-width: 800px;
+	margin: 40px auto;
+	padding: 20px;
+	border: 1px solid #fff;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+h1, h2 {
+	margin: 0;
+	line-height: 1.25;
+}
+
+h1 {
+	padding-bottom: 20px;
+	border-bottom: 6px dotted;
+	font-size: 3rem;
+	text-transform: uppercase;
+	text-shadow: 1px 1px #fffcf5, 3px 3px;
+}
+
+h2 {
+	margin-top: 40px;
+	font-size: 1.5rem;
+}
+
+canvas {
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+
+@media screen and (min-width: 450px) {
+	h1 {
+		font-size: 4rem;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+}
+</style>
+
+</head>
+<body>
+
+<h1>Chocolate Page</h1>
+<h2>All about chocolate</h2>
+
+<h3>White chocolate</h3>
+
+<p>White chocolate is a confectionery typically made of sugar, milk, and cocoa butter, but no cocoa solids. It is pale ivory in color, and lacks many of the compounds found in milk, dark, and other chocolates.[1] It is solid at room temperature (25 °C (77 °F)) because the melting point of cocoa butter, the only white cocoa bean component, is 35 °C (95 °F).[2]
+
+As for the other two main types of chocolate (dark and milk), white chocolate is used for chocolate bars or as a coating in confectionery.</p>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Chocolate-branco-2.webp/1024px-Chocolate-branco-2.webp.png" alt="white_chocolate" style="width:500px;height:400px;">
+
+<h3>Milk chocolate</h3>
+
+<p>Milk chocolate is a form of solid chocolate containing cocoa, sugar and milk. It is the most consumed type of chocolate, and is used in a wide diversity of bars, tablets and other confectionery products. Milk chocolate contains smaller amounts of cocoa solids than do dark chocolates, and (as with white chocolate) contains milk solids. While its taste (akin to chocolate milk) and texture have been key to its popularity, milk chocolate has historically also been promoted as a healthy food, particularly for children, and recent evidence has shown that it may provide antioxidant health benefits.</p>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Milka_Alpine_Milk_Chocolate_bar_100g_with_chunks_broken_off.jpg/1024px-Milka_Alpine_Milk_Chocolate_bar_100g_with_chunks_broken_off.jpg" alt="milk_chocolate" style="width:500px;height:400px;">
+
+<h3>Dark chocolate</h3>
+
+<p>Dark chocolate is a form of chocolate containing cocoa solids and cocoa butter without the milk or butter found in milk chocolate.[1] Dark chocolate without added sweetener is known as bitter chocolate[2] or unsweetened chocolate.[3] As with the other two main types of chocolate (milk and white), dark chocolate is used for chocolate bars or as a coating in confectionery.</p>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Green_and_Black%27s_dark_chocolate_bar_2.jpg/1024px-Green_and_Black%27s_dark_chocolate_bar_2.jpg" alt="black_chocolate" style="width:500px;height:400px;">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>How old are you?</h2>
+
+
+  <p>Please select your age:</p>
+  <input type="radio" id="html" name="fav_language" value="White chocolate">
+  <label for="html">0-20</label><br>
+  <input type="radio" id="css" name="fav_language" value="Milk chocolate">
+  <label for="css">20-50</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="Black chocolate">
+  <label for="javascript">50-100</label>
+
+  <br>  
+  
+<h3>What kind of chocolate do you like?</h3>
+
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+<label for="vehicle1"> White chocolate</label><br>
+<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+<label for="vehicle2"> Milk chocolate</label><br>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+<label for="vehicle3"> Black chocolate</label><br>
+
+<br>
+
+<!-- Surround the select box within a "custom-select" DIV element.
+Remember to set the width: -->
+<div class="custom-select"> 
+  <select>
+    <option value="0">Select favorite brand</option>
+    <option value="1">Tomblerone</option>
+    <option value="2">Milka</option>
+    <option value="3">Kinder</option>
+    <option value="4">Ferrero Rocher</option>
+    <option value="5">KitKat</option>
+    <option value="6">Hershey's</option>
+    <option value="7">Lindt</option>
+    <option value="8">Chirardelli</option>
+    <option value="9">Dairy Milk</option>
+    <option value="10">Twix</option>
+    <option value="11">Mars</option>
+    <option value="12">Snikers</option>
+  </select>
+</div>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>If you have a chance to create your own chocolate...</h2>
+
+<form action="/action_page.php">
+  <p><label for="w3review">What would it be like?</label></p>
+  <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+  <br>
+
+</form>
+
+<!DOCTYPE html>
+
+
+<button onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Thank you! We will make sure to convey your idea!";
+}
+</script>
+
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-bdp9KYg_Vs?si=0_hmC7aBERNZHAJj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br>
+<a href="https://en.wikipedia.org/wiki/Chocolate" target="_blank">More about chocolate in Wiki</a>
+ <br>
+<a href="https://www.britannica.com/topic/chocolate" target="_blank">More about chocolate in Britannica</a> 
+<br>
+<a href="https://www.amazon.com/chocolate/s?k=chocolate" target="_blank">Buy chocolate at Amazon!</a> 
+
+
+
+
+</body>
+</html>
