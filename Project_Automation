@@ -1,0 +1,83 @@
+package automation;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+public class MyJava_Project {
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver = null;
+		System.out.println("Starting Driver");
+		System.setProperty("webdriver.gecko.driver", "c:\\Selenium\\geckodriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "c:\\Selenium\\chromedriver.exe");
+		//driver = new ChromeDriver();
+		driver = new FirefoxDriver();
+		Thread.sleep(2000);
+		
+		
+		driver.manage().window().maximize();
+		driver.get("https://www.yahoo.com");
+		Thread.sleep(1000);
+
+		
+		String expectedTitle = "Yahoo | Mail, Weather, Search, Politics, News, Finance, Sports & Videos";
+		String actualTitle = driver.getTitle();
+		Assert.assertEquals(expectedTitle,actualTitle);
+
+		
+
+		//Link to the Mail section from the Yahoo.com
+		driver.findElement(By.id("root_1")).click();
+
+		//Pressing on Sign-In from the Pink page (only if you logged out)
+		driver.findElement(By.linkText("Sign in")).click();
+		   
+		Thread.sleep(2000);
+
+		   //Pressing on the Next button
+		   driver.findElement(By.id("login-username")).sendKeys("qa.di@yahoo.com");
+		   
+		   //Pressing on the Next button
+		   driver.findElement(By.id("login-signin")).click();
+		Thread.sleep(2000);
+
+		   driver.findElement(By.id("login-passwd")).sendKeys("PepperMint123678");
+		Thread.sleep(2000);
+		   driver.findElement(By.id("login-signin")).click();  
+		Thread.sleep(3000);
+		
+		//Change color of mail page
+	    driver.findElement(By.cssSelector(".D_n > span")).click();
+	    Thread.sleep(2000);
+	    //For the First time
+	    driver.findElement(By.cssSelector(".A_0:nth-child(5) > .D_X")).click();
+	    Thread.sleep(2000);
+	    //For the Second Time
+	    driver.findElement(By.cssSelector(".A_0:nth-child(11) > .D_X")).click();
+	    Thread.sleep(2000);
+		   
+	    
+	    //Send Mail
+	    driver.findElement(By.linkText("חבר")).click();
+	    Thread.sleep(2000);
+	    //To
+	    driver.findElement(By.id("message-to-field")).sendKeys("1@gmail.com");
+	    Thread.sleep(2000);
+	    
+	    driver.findElement(By.cssSelector(".je_0")).click();
+	    Thread.sleep(2000);
+	    //Title
+	    driver.findElement(By.cssSelector(".je_0")).sendKeys("Hello");
+	    Thread.sleep(2000);
+	    
+	    driver.findElement(By.cssSelector(".rte")).click();
+	    Thread.sleep(2000);
+	    //Send
+	    driver.findElement(By.cssSelector(".q_Z29WjXl")).click();
+
+		         }
+
+		}
